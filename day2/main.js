@@ -155,6 +155,41 @@ largest();
 // - NINE, if num is equal to .
 // - PLEASE TRY AGAIN, if  is none of the above.
 
+var a = Number(prompt("enter a value"));
+
+switch(a){
+  case 1:
+   console.log(a)
+  break;
+  case 2:
+  console.log(a);
+  break;
+  case 3:
+  console.log(a);
+  break;
+  case 4:
+  console.log(a);
+  break;
+  case 5:
+  console.log(a);
+  break;
+  case 6:
+  console.log(a);
+  break;
+  case 7:
+  console.log(a);
+  break;
+  case 8:
+  console.log(a);
+  break;
+  case 9:
+  console.log(a);
+  break;
+  default:
+  console.log("try again none of the above")
+  break;
+}
+
 
 
 // You are given a variable marks. Your task is to print:
@@ -167,6 +202,34 @@ largest();
 // - DD if marks is greater than 30 and less than or equal to 40
 // - FF if marks is less than or equal to 30
 
+var a = Number(prompt("enter a value"));
+
+switch(a){
+  case AA:
+  console.log("marks greater than 90")
+  break;
+  case AB:
+  console.log(a);
+  break;
+  case BB:
+  console.log(a);
+  break;
+  case BC:
+  console.log(a);
+  break;
+  case CC:
+  console.log(a);
+  break;
+  case DD:
+  console.log(a);
+  break;
+  case FF:
+  console.log(a);
+  break;
+  default:
+  console.log("try again none of the above")
+  break;
+}
 
 
 
@@ -203,4 +266,4 @@ console.log(typeof(x));
 //  Solve: 225 % 6 = ?
 
 var x = 255%6 ;
-console.log(x); // 3
+console.log(x); // 

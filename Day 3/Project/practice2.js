@@ -8,7 +8,7 @@
     return toString(number);
  }
 console.log(changeVal());
-/**
+/*
  * Adds one to a given number.
  * @param {number} n
  * @return {number}

@@ -109,9 +109,6 @@ console.log("number is odd");
 oddEven();
 
 // Funnction to take two input and show the relation using =, > or < i.e (21,45) 21 < 45, (23,12) 23 > 12
-
-
-
 // Funnction to Check Whether a Character is Vowel or Consonant
 
 function letterCheck(){

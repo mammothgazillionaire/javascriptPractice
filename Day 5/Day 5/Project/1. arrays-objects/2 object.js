@@ -31,22 +31,43 @@ myPenguin.sayHello = function(){
 			return this.name;
 		    };
 
-myPenguin.sayHello();
-
 
 //6. Next, call your penguin's sayHello() method and make sure that it works!
 
+myPenguin.sayHello();
 
 //7. Without modifying any of your previous code, change the penguin's name to "Penguin McPenguinFace" and then call your penguin's sayHello() function one more time to make sure it still works.
 
+myPenguin.name = "Penguin McPenguinFace";
+
+
 //8. Write another method called fly, and inside that method, use an if / else statement to print "I can fly!" to the console if your penguin's canFly property is true, or "No flying for me!" if its canFly property is false.
+
+myPenguin.fly = function(){
+			if(canFly == true){
+				console.log("I can fly");
+			}else{
+				console.log("No flying for me!");
+			}
+			return canFly();
+		};
 
 //9. Call your penguin's fly() method and make sure it works!
 
+
+
 //10. Change the canFly property to true -- again, without modifying any of your previous code!
+
+myPenguin.canFly = false;
 
 //11. Now call your penguin's fly() method again and make sure it works as expected!
 
+myPenguin.fly();
+
 //12. Write a for ... in loop to print each key to the console. (Hint: See this page for an example of this special type of loop.)
+
+for(const prop in myPenguin){
+console.log(myPenguin.tail = 1);
+}
 
 //13. Write another for ... in loop to print the value of each key to the console. (Hint: You'll need to use bracket notation to access the values this way, instead of dot notation!)

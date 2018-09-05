@@ -11,22 +11,36 @@
     <li>Nickname: <span id="nickname"></span>
     <li>Favorites:  <span id="favorites"></span>
     <li>Hometown: <span id="hometown"></span>
-    </ul>
+   </ul>
 
-  <script>
-    // change font family
-    var font = document.querySelector("body");
+   <script>
+   var changeFont = document.querySelector("body");
+   changeFont.style.fontFamily = "Arial,sans-serif";
 
-    font.style.fontFamily = "Arial, sans-serif";
-    
-    // change  information   
-    
-
-    var name = document.querySelector("#nickname").innerHTML = "None";
-    var fav = document.querySelector("#favorites").innerHTML = "None";;
-    var town = document.querySelector("#hometown").innerHTML = "None";;
+   var nName = document.getElementById("nickname");
+   nName.innerHTML = "madhusudan";
+   var fav = document.getElementById("favorites");
+   fav.innerHTML = "none";
+   var town = document.getElementById("hometown");
+  town.innerHTML = "delhi";
 
 
-  </script>    
+    var listitems = document.getElementsByTagName("li");
+
+    for (int i = 0; i < listitems.length; i++){
+      
+      listitems[i].classList.add = "listItem";
+
+      }
+ 
+// img tag
+  
+function addImg(){
+   var imgTag = document.createElement("img");
+  imgTag.setAttribute('src',"https://www.facebook.com/photo.php?fbid=478214722300732&set=a.110099662445575&type=3&theater");           
+  document.body.appendChild(imgTag);
+}
+addImg();  
+   </script>
  </body>
 </html>

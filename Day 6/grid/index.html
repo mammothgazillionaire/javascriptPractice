@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+.grid-box{
+width: 40px;
+height: 40px;
+border: 1px solid black;
+background: goldenrod;
+border-radius: 1px;
+}
+.container {
+        display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+.color {
+    background: aliceblue;
+}
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+    var row =10;
+    var col =10;
+    // var bool = true;
+
+for(var i = 1 ; i <= row ; i++ ){
+    for(var j = 1 ; j <= col ; j++ ){
+        var grid = document.querySelector(".container");
+        var element = document.createElement('div');
+        element.classList.add('grid-box');
+        element.setAttribute("data-row",`${i}`);
+        element.setAttribute("data-col",`${j}`);
+        grid.appendChild(element);
+        // console.log(grid)
+    }  
+}
+
+function randColor(){
+
+        var selector = document.querySelectorAll(".grid-box");
+            // console.log(bool);
+
+        for(var x = 0 ; x < selector.length ; x++){
+            var cell = selector[x];
+            var row = Number(cell.dataset.row);
+            var col = Number(cell.dataset.col);
+            
+            // var oddNumber = (row + col) % 2 == 0;
+            
+              
+            
+            /*
+                for targeting even number
+                // if(oddNumber == bool)
+            */
+
+            if(Math.random() > 0.3){
+                cell.classList.add('color');
+            }
+            else{
+                cell.classList.remove('color');
+            }
+        // console.log(selector[x]);
+        
+        }
+       
+        // bool = !bool;
+
+}
+ setInterval(randColor,500);
+    </script>
+</body>
+</html>

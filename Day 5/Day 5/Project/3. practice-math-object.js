@@ -20,21 +20,31 @@ console.log(decimals(2100, 2)); //2100.00
 
 
 
+function roundNum(a) {
+	var b = parseFloat(a).toFixed(2);
+
+	return b;
+}
+roundNum(prompt("enter a decimal number"));
+
 3. Write a JavaScript function to find the highest value in an array.
 
 Example:
 console.log(maxNumber([12,34,56,1])); //56
 console.log(maxNumber([-12,-34,0,-56,-1])); //0
 
-var arr = [12,34,56,1];
 
-function maxNumber() {
+function maxNumber(arr) {
+	var highest = arr[0];
 	for(var i = 0 ; i < arr.length ; i++){
-	if (arr[i] ){
+	if (arr[i] > max ){
+			highest = arr[i];
+			}
+		}
+		return max;
+	};
 
-}
-}
-}
+	maxNumber([2,51,24,-56,12]);
 
 
 

@@ -1,9 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>JS + CSS Clock</title>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<style>
+		body {
+			background: url("http://laoblogger.com/images/clipart-ocean-scenes-7.jpg") no-repeat center;
+			background-size: cover;
+		}
+
+		.clock {
+			border: 15px solid lightgrey;
+			width: 28vmin;
+			height: 28vmin;
+			border-radius: 50%;
+			margin: 10rem auto;
+			position: relative;
+			box-shadow: 1px 1px 15px rgba(0,0,0.8),-1px -1px 15px rgba(0,0,0.8),1px -1px 15px rgba(0,0,0.8),-1px 1px 15px rgba(0,0,0.8),1px 1px 10px inset rgba(0,0,0.8),-1px -1px 10px inset rgba(0,0,0.8),1px -1px 10px inset rgba(0,0,0.8),-1px 1px 10px inset rgba(0,0,0.8);
+		}
+
+		.hand {
+			background-color: #222;
+			height: .8vh;
+			width: 12vw;
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+		 transform-origin: 0;
+		 
+		}
+    
+    .hand2 {
+      background: white;
+    }
+    
+    .hand3 {
+      background: goldenrod;
+    } 
+
+	</style>
 </head>
+
+
+
 <body>
+	<div class="clock">
+		<div class="hand hand1"></div>
+		<div class="hand hand2"></div>
+		<div class="hand hand3"></div>
+	</div>
+
+  <script src="src/index.js">
+  // select hands
+
+
+function updateClock() {
+  var date = new Date();
+  var handSec = document.querySelector(".hand1");
+  var handMin = document.querySelector(".hand2");
+  var handHr = document.querySelector(".hand3");
+
+  // transform = rotate(date.get,sec,min,hrs) * 6deg
+  var getHourIn12HrsFormat = date.getHours();
+  
+  getHourIn12HrsFormat = getHourIn12HrsFormat > 12 ? (24 - getHourIn12HrsFormat) : getHourIn12HrsFormat;
+  
+  var hourDegree = (getHourIn12HrsFormat * 30) - 90;
+  var minuteDegree =  (date.getMinutes() * 6) - 90;
+  var secondDegree =  (date.getSeconds() * 6) - 90;
+  
+   handSec.style.transform = "rotate(" + secondDegree + "deg)";
+  handMin.style.transform = "rotate(" + minuteDegree + "deg)";
+handHr.style.transform = "rotate("  + hourDegree  + "deg)";
+  
+}
+
+setInterval(updateClock, 1000);
+  </script>
 </body>
+
 </html>

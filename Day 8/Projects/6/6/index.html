@@ -19,31 +19,110 @@
 	    </header>
 	    <div id="book-list">
 	    	<h2 class="title">Books to Read</h2>
-	    	<ul>
-	    		<li>
-	    			<span class="name">The Lord of the Rings Trilogy</span>
-	    			<span class="delete">delete</span>
-	    		</li>
-	    		<li>
-	    			<span class="name">A Game of Thrones</span>
-	    			<span class="delete">delete</span>
-	    		</li>
-	    		<li>
-	    			<span class="name">To Kill a Mockingbird</span>
-	    			<span class="delete">delete</span>
-	    		</li>
-	    		<li>
-	    			<span class="name">The Little Prince</span>
-	    			<span class="delete">delete</span>
-	    		</li>
+	    	<ul class="list">
 	    	</ul>
 	    </div>
-	    <form id="add-book">
+	    <div id="add-book">
         <input type="checkbox" id="hide" />
         <label for="hide">Hide all books</label>
-	    	<input type="text" placeholder="Add a book..." />
-	    	<button>Add</button>
-	    </form>
-    </div>
-  </body>
+	    <input class="addValue" type="text" placeholder="Add a book..."/>
+	    <button>Add</button>
+	    </div>
+		</div>
+		
+		<script>
+
+			var books = [
+				"The Lord of the Rings Trilogy",
+				"A Game of Thrones",
+				"To Kill a Mockingbird"
+			];
+
+			var booksList = document.querySelector('.list');
+		
+			var booksArray = [];
+
+			// appending the books
+
+			function displayBooks() {
+				books.forEach((book,i) => {
+					booksArray.push(`<li>
+	    				<span class="name" data-id=${i}>${book}</span>
+	    				<span class="delete" data-id=${i}>delete</span>
+	    			</li>`);
+				})
+				booksList.innerHTML = booksArray.join("");
+				booksArray = [];
+			}
+
+			displayBooks();
+			
+		
+			booksList.addEventListener('click', deleteBook);
+
+
+			function deleteBook(e){
+				console.log(e.target.classList);
+				if(e.target.classList[0] !== "delete") return;
+				// console.log(e.target.dataset.id)
+			 books.splice(e.target.dataset.id,1);
+				displayBooks()
+			}
+
+
+	// add books 
+
+	var addBtn = document.querySelector("button");
+
+	addBtn.addEventListener('click', addBook);
+	function addBook(e){
+		e.preventDefault();
+		
+		var addBooks = document.querySelector(".addValue").value;
+	
+		books.push(addBooks);
+
+		displayBooks();
+		document.querySelector(".addValue").value = "";
+	}
+	
+
+	// hide all books 
+
+		var hideBooks = document.getElementById("hide");
+
+		function hideAll(){
+				
+		if(hideBooks.checked){
+				booksList.style.display = "none";
+		}
+		else{
+			booksList.style.display = "block";
+		}
+	 }
+	 	hideBooks.addEventListener('click', hideAll);
+
+
+
+	// search books 
+
+	var search = document.querySelector("#search-books input");
+
+	search.addEventListener('keydown', filterSearch);
+
+	function filterSearch(e){
+
+		var listOfBooks = document.querySelectorAll('li');
+		listOfBooks.forEach(elm => {
+			if(!elm.innerText.toLowerCase().includes(e.target.value)){
+				elm.style.display = "none"
+			} else {
+				elm.style.display = "block"
+			}
+		})
+	}
+
+		</script>
+	
+</body>
 </html>

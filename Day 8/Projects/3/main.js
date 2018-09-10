@@ -4,12 +4,11 @@ var arr = ["#000","#ff0","#0ff","#f00","#00f","#f0f","#0f0"];
 var color = Math.floor(Math.random()*arr.length);
 
 
+
 function  switchColor(){
     var col = document.getElementById("background-color");
     col.style.backgroundColor = arr[color];  
 };
-
-
 
 
 

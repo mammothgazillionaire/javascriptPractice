@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Unlock');
+
+
+body {
+  font-size: 1rem;
+  background: url(../img/iron-man-simple-2-4k.jpg) no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 1rem auto;
+  display: flex;  ;
+}
+
+.window1 {
+  flex: 5;
+}
+
+
+.window2 {
+justify-content: flex-end;
+position: relative;
+left: 35%; 
+}
+
+.heading {
+  color: firebrick;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 8px rgba(0,0,0,.6),-3px -3px 8px rgba(0,0,0,.6);
+  letter-spacing: .1rem;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+ul{
+  text-align: center;
+  padding: 15px;
+}
+
+li {
+  background: #f4f4f4;
+  display: flex;
+  padding: 5px;
+  width: 24vw;
+  border-bottom: 1px solid #222;
+}
+
+input[type=checkbox]{
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: .4rem;
+  outline: 0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.6);
+  border: none;
+}
+
+label {
+  font-size: 1.3rem;
+  padding: .1rem;
+  position: relative;
+  left: 20%;
+  text-align: center;
+}
+
+.addValues {
+  display: flex;
+  padding: 0px 0px;
+}
+
+input[type=text]{
+  background: whitesmoke;
+  outline: none;
+  border: 2px solid #444;
+  border-radius: 15px;
+  height: 1.8rem;
+  padding: .26rem 1.2rem;
+  margin-left: 1rem;
+}
+.addBtn {
+  background: rgb(196, 158, 192);
+  margin-left: .5rem;
+  padding: .5rem;
+  height: 1.3vmax;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.6);
+  width: 7.5vw;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+
+.close {
+  position: absolute;
+  right: 5%;
+  font-size: 1.6rem;
+}
+
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+  filter: blur(1px);
+}
+input[type=checkbox]:checked {
+  visibility: hidden;
+}
+input[type="checkbox"]:not(:checked) {
+  visibility: visible;
+}
+
+
+/* clock css */
+
+
+.clock {
+  width: 25vw;
+  height: 20vh;
+  display:flex;
+  position: relative;
+  left: 67%;
+  top: 67%;
+  margin: 10rem auto;
+  text-align: center;
+}
+.hour,
+.minute,
+.sec {
+  font-size: 4rem;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: 'Unlock', cursive;
+  text-shadow: 2px 2px 5px rgba(0,0,0),-2px -2px 5px rgba(0,0,0);
+}

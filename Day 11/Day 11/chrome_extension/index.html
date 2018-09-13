@@ -8,30 +8,48 @@
   <link rel="stylesheet" type="text/css" href="css/main.css" />
   <link rel="stylesheet" href="css/normalize.css">
 </head>
+
 <body>
+  
   <div class="container">
-    <div class="window window1">
-        <div class="clock">
-            <div class="hour"></div>
-            <div class="minute"></div>
-            <div class="sec"></div>
-          </div>
+    <div class="window window1 wrapper">
+        
+      <div class="clock wrapper">
+          <div class="hour"></div>
+          <div class="minute"></div>
+          <div class="sec"></div>    
+      </div>
+      <section class="section">
+        <div class="greeting wrapper">
+            <input type="text" name="" id="user_name">
+            <input class="user_info">
+        </div>
+        
+        <div class="for__quotes wrapper"></div>
+      </section>
+
     </div>
-    <div class="window window2">
+    
+    <div class="window window2 wrapper">
+        
         <h1 class="heading">To do List</h1>
+        
         <ul class="list">
           <li class="list-item">
             <input type="checkbox" class="check">
             <label for="check">Build chrome extension</label>
           </li>
         </ul> 
-          <div class="addValues">
-            <input type="text" class="value">
-            <buttton class="addBtn"><a href="#">+ Add todo</a></buttton>
-          </div>     
+        
+        <div class="addValues">
+          <input type="text" class="value">
+          <buttton class="addBtn"><a href="#">+ Add todo</a></buttton>
+        </div>     
+    
     </div>
+  
   </div>
 
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js" type="module"></script>
 </body>
 </html>

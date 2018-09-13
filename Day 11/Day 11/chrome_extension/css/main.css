@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Unlock');
 
+*,html,body {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
 
 body {
   font-size: 1rem;
@@ -9,19 +14,26 @@ body {
 
 .container {
   max-width: 1000px;
-  margin: 1rem auto;
-  display: flex;  ;
+  display: flex; 
+  text-align: center;
+  position: relative;
 }
 
-.window1 {
-  flex: 5;
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;  
 }
 
+.window{
+  position: absolute;
+  left: 50%;
+}
 
-.window2 {
-justify-content: flex-end;
-position: relative;
-left: 35%; 
+.window2{
+  display: grid;
+  justify-content: end;
+  transform: translate(30%,35%);
 }
 
 .heading {
@@ -44,6 +56,10 @@ li {
   padding: 5px;
   width: 24vw;
   border-bottom: 1px solid #222;
+  margin-top: -19px;
+  background: yellowgreen;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 input[type=checkbox]{
@@ -57,15 +73,12 @@ input[type=checkbox]{
 
 label {
   font-size: 1.3rem;
-  padding: .1rem;
-  position: relative;
-  left: 20%;
-  text-align: center;
+  padding: .1rem; 
+  padding-left: 5rem;
 }
 
 .addValues {
   display: flex;
-  padding: 0px 0px;
 }
 
 input[type=text]{
@@ -73,56 +86,53 @@ input[type=text]{
   outline: none;
   border: 2px solid #444;
   border-radius: 15px;
-  height: 1.8rem;
+  height: 2.4rem;
   padding: .26rem 1.2rem;
   margin-left: 1rem;
 }
+
 .addBtn {
   background: rgb(196, 158, 192);
   margin-left: .5rem;
   padding: .5rem;
-  height: 1.3vmax;
+  height: 2vmax;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0,0,0,.6);
   width: 7.5vw;
   text-align: center;
 }
+
 a{
   text-decoration: none;
   color: #222;
 }
 
+.list{
+  position: relative;
+}
+
 .close {
   position: absolute;
-  right: 5%;
+  left: 90%;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
 input[type=checkbox]:checked + label {
   text-decoration: line-through;
-  filter: blur(1px);
+  filter: blur(.78px);
 }
-input[type=checkbox]:checked {
-  visibility: hidden;
-}
-input[type="checkbox"]:not(:checked) {
-  visibility: visible;
-}
-
 
 /* clock css */
-
 
 .clock {
   width: 25vw;
   height: 20vh;
   display:flex;
-  position: relative;
-  left: 67%;
-  top: 67%;
-  margin: 10rem auto;
-  text-align: center;
+  transform: translate(7%,55%);
+  margin: 0 auto;
 }
+
 .hour,
 .minute,
 .sec {
@@ -131,4 +141,35 @@ input[type="checkbox"]:not(:checked) {
   color: whitesmoke;
   font-family: 'Unlock', cursive;
   text-shadow: 2px 2px 5px rgba(0,0,0),-2px -2px 5px rgba(0,0,0);
+}
+
+.section{
+ transform: translate(-5vw,30vh);
+}
+
+.greeting{
+  font-size: 3rem;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: 'Unlock', cursive;
+  text-shadow: 1px 1px 5px rgba(0,0,0),-1px -1px 5px rgba(0,0,0);
+  margin: 2rem;
+}
+
+.for__quotes {
+  font-size: 2rem;
+  color: whitesmoke;
+  font-family: 'Unlock', cursive;
+  text-shadow: 1px 1px 5px rgba(0,0,0),-1px -1px 5px rgba(0,0,0);
+  margin: 1rem auto;
+  line-height: 1.5;
+}
+
+.user-info {
+  margin: 4rem 0;
+}
+.edit{
+ transform: rotate(90deg);
+ position: absolute;
+  left: 80%;
 }

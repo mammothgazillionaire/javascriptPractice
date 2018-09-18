@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "testing ",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mammothgazillionaire/javascriptPractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mammothgazillionaire/javascriptPractice/issues"
+  },
+  "homepage": "https://github.com/mammothgazillionaire/javascriptPractice#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "node-sass": "^4.9.3"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0"
+  }
+}

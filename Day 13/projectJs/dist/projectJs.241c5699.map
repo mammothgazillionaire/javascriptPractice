@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["document","write"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,SAASC,KAAT,CAAe,QAAf","file":"projectJs.241c5699.map","sourceRoot":"..","sourcesContent":["document.write('Helllo');"]}

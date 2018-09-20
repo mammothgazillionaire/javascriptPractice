@@ -34,20 +34,9 @@ var correctAnswers = [
 
 
   var headingQuiz = document.querySelector(".quiz__main");
-  var timer = 30; 
+  
   headingQuiz.innerHTML = `<h1 class="heading__main">Let's Quiz</h1>
                            <button class="button__start">Start Quiz</button>`
-
-            
-//  var heading =  document.querySelector(".heading__main");
-
-//  var quizBtn = document.querySelector(".button__start");
-
- var displayQuiz = document.querySelector(".display_quiz");
-
- displayQuiz.innerHTML = `<p class="countdown">Time left: ${timer}</p>
-                          <p class="question"></p>
-                          <div class="options"></div>`
 
 function startQuiz(){
   quizBtn.style.display = "none";
@@ -55,10 +44,42 @@ function startQuiz(){
 }
 
 
-// function displayQAndA(){
-
-// }
 
 
 quizBtn.addEventListener('click', startQuiz);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // var timer = 30; 
+
+            
+//  var heading =  document.querySelector(".heading__main");
+
+//  var quizBtn = document.querySelector(".button__start");
+
+// var displayQuiz = document.querySelector(".display_quiz");
+
+// displayQuiz.innerHTML = `<p class="countdown">Time left: ${timer}</p>
+//                          <p class="question"></p>
+//                          <div class="options"></div>`
+
+// function displayQAndA(){
+
+// }

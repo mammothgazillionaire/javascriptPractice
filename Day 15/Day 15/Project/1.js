@@ -20,32 +20,34 @@
   //     this.speed = mph;
   //     return this.driver + ' driving at ' + mph + ' miles per hour';
   //   };
-
-  //   // use Proto 
   // };
 
-var car = new car(Vehicle);
+var car = new Vehicle();
 
 
-  var Truck = function(driver) {
-    this.driver = driver;
-    this.speed = 0;
-    this.cargo = [];
-    this.drive = function(mph) {
-      this.speed = mph;
-      return this.driver + ' driving at ' + mph + ' miles per hour';
-    };
+  // var Truck = function(driver) {
+  //   this.driver = driver;
+  //   this.speed = 0;
+  //   this.cargo = [];
+  //   this.drive = function(mph) {
+  //     this.speed = mph;
+  //     return this.driver + ' driving at ' + mph + ' miles per hour';
+  //   };
 
-    this.loadCargo = function(cargo) {
-      this.cargo.push(cargo);
-      return this;
-    };
+var truck = new Vehicle();
 
-    this.unloadCargo = function() {
-      return this.cargo.pop();
-    };
-  };
+// car.prototype === __proto__truck;
 
+
+this.loadCargo = function(cargo) {
+  this.cargo.push(cargo);
+  return this;
+};
+
+this.unloadCargo = function() {
+  return this.cargo.pop();
+};
+};
 
 
 
@@ -54,3 +56,21 @@ var car = new car(Vehicle);
 
 
 // Create an object called Teacher derived from the Person class, and implement a method called teach which receives a string called subject, and prints out.
+
+
+class Person {
+
+constructor(name,subject){
+  this.name = name;
+  this.subject = subject;
+}
+
+teach(){
+  alert(`${this.name} teaches ${this.subject}`)
+}
+
+}
+
+var user = new Person("john","javascript");
+
+user.teach()

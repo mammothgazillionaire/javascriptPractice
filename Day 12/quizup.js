@@ -43,9 +43,6 @@ function startQuiz(){
 
 }
 
-
-
-
 quizBtn.addEventListener('click', startQuiz);
 
 
@@ -66,20 +63,15 @@ quizBtn.addEventListener('click', startQuiz);
 
 
 
-
-  // var timer = 30; 
-
-            
-//  var heading =  document.querySelector(".heading__main");
-
-//  var quizBtn = document.querySelector(".button__start");
-
-// var displayQuiz = document.querySelector(".display_quiz");
-
-// displayQuiz.innerHTML = `<p class="countdown">Time left: ${timer}</p>
-//                          <p class="question"></p>
-//                          <div class="options"></div>`
-
-// function displayQAndA(){
-
+// var count = 30;
+// var counter = function(){
+//   document.querySelector('count').innerHTML= count;
+//   count--;
+//   if (count === 0){
+//     clearInterval(interval);
+//     document.getElementById('count').innerHTML='Done';
+//     // or...
+//     alert("You're out of time!");
+//   }
 // }
+// setInterval(counter, 1000);

@@ -5,8 +5,24 @@ let count = {
 
 // Make the object iterable so it can print values starting from start till final
 
+count[Symbol.iterator] = function(){
 
-
+  return {
+      current: this.start,
+      last: this.final,
+      next() {
+        if(this.current <= this.last){
+          return {done: false, value: this.current++ };
+        }else {
+          return {done: true};
+        }
+      };
+    };
+  };
+  
+  for (let num of count) {
+    console.log(num);
+  }
 
 
 

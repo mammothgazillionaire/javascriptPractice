@@ -1,0 +1,47 @@
+*,html,body{
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: url(assets/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 900px;
+  height: auto;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+
+.snake_game{
+  display: flex;
+  flex-wrap: wrap;
+  height: 60vh;
+  max-height: 60vh;
+  padding: 20px 88px 0px 85px;
+}
+
+
+.grid-box{
+  width: 28px;
+  height: 28px;
+  border: 2px solid white;
+  background: #dcedc8;
+  border-radius: 1px; 
+  }
+
+
+.snake_img{
+  height: 10%;
+}
+
+.play-btn{
+  width: 10%;
+  height: 4%;
+  position: relative;
+  left: 26%;
+}

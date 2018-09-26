@@ -232,8 +232,8 @@ DOMDisplay.prototype.scrollPlayerIntoView = function(state) {
   }
 };
 
-let display = new DOMDisplay(document.body, simpleLevel);
-  display.syncState(State.start(simpleLevel));
+// let display = new DOMDisplay(document.body, simpleLevel);
+//   display.syncState(State.start(simpleLevel));
 
 // MOTION
 
@@ -408,4 +408,4 @@ async function runGame(plans, Display) {
 }
 
 
-// runGame(GAME_LEVELS, DOMDisplay);
+runGame(GAME_LEVELS, DOMDisplay);

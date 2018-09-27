@@ -141,7 +141,7 @@ class Coin {
   }
 }
 
-Coin.prototype.size = new Vec(0.6, 0.6);
+Coin.prototype.size = new Vec(0.6, .8);
 
 const levelChars = {
   ".": "empty", "#": "wall", "+": "lava",

@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Github api</title>
+
+  <style>
+    body{
+      background: rgb(118, 121, 114);
+    }
+
+    .container {
+      position: relative;
+      top: 25%;
+      margin: 0 auto;
+      width: 1000px;
+      max-width: 1000px;
+      text-align: center;
+      padding: 1rem;
+      background: white;
+      border-radius: 2px;
+      box-shadow: 5px 10px 10px rgba(0,0,0,0.6);
+    }
+    .info-user{
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+    
+    .user{
+      text-transform: uppercase;
+      padding: 1rem;
+      line-height: 2;
+    }
+    .avatar{
+      border-radius: 50%;
+      height: 25%;
+      width: 25%;
+    }
+    .info-display{
+      display:flex;
+      justify-content: space-evenly;
+      margin-left: -3rem;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+    .info-user{
+      width: 50%;
+      padding:10px;
+      text-align: center;
+    }
+  .lds-hourglass {
+  display: inline-block;
+  position: absolute;
+  top: 47%;
+  left: 47%;
+  width: 64px;
+  height: 64px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 6px;
+  box-sizing: border-box;
+  border: 26px solid rgb(22, 20, 20);
+  border-color: rgb(24, 23, 23) transparent rgb(22, 20, 20) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <input class="info-user" type="text" placeholder="User Name + enter">
+    </div>
+    <div class="lds-hourglass"></div>
+    <div class="user">
+      <img class="avatar" src="">
+      <h2 class="loginName"></h2>
+      <div class="info-display">
+          <div class="followers"></div>
+          <div class="following"></div>
+          <div class="repos"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

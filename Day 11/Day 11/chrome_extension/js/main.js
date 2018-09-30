@@ -9,6 +9,7 @@ var checkListItems = document.querySelector(".check");
 var closeBtn = document.querySelector(".close");
 var greeting = document.querySelector(".greeting");
 var forQuotes = document.querySelector('.for__quotes');
+var body = document.querySelector("body");
 
 // create and display items of TODO
 
@@ -116,6 +117,9 @@ function greetings(){
   }
   
 }
+
+function randomQuotes(){
+
   greetings();
 
 
@@ -123,15 +127,20 @@ function greetings(){
 
 
 // QUOTES
-
-function randomQuotes(){
-
 var randomValue = Math.floor(Math.random() * quotes.length);
 var randomQuote = quotes[randomValue];
 
 forQuotes.innerHTML = `<p class="quote">${randomQuote.quote}</p><p class="author">${randomQuote.author}</p>`;
 }
 
+function randomImages(){
+var url = `https://api.unsplash.com/photos/random/?client_id=5068b1351673e00db9c5190a78f474df8a3c21667e90590c23c575599774b6d8`
+fetch(url).then(data => data.json()).then(images => {
+  body.style.background = `url(${images.urls.regular}) no-repeat`;
+  body.style.backgroundSize = "cover";
+});
+}
+randomImages();
 randomQuotes();
 
 setInterval(randomQuotes, 20000);

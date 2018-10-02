@@ -15,7 +15,7 @@ body{
   text-align: center;
   font-size: 1.2rem;
   position: absolute;
-  top: 60%;
+  top: 58%;
   left: 38%;
   outline: none;
 }
@@ -32,7 +32,7 @@ img{
   padding:5px 10px;
 }
 .two{
- transform: translateY(180%);
+ transform: translateY(160%);
 }
 
 .address{
@@ -40,6 +40,32 @@ img{
   position: absolute;
   bottom:-30%;
   word-break: break-all;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transform: translateY(-10%);
+}
+.change-gifs,
+.trending{
+  align-self: center;
+  margin: 5px 12px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: serif;
+  box-shadow: 5px 15px 15px rgb(56, 55, 55),5px -15px -15px rgb(54, 54, 54);
+}
+.change-gifs{
+  background: linear-gradient(to top left,rgb(212, 37, 37), rgb(115, 255, 0));
+}
+.trending{
+  background: linear-gradient(to top left,rgb(54, 56, 212), rgb(0, 255, 255));
 }
 
 .lds-hourglass {

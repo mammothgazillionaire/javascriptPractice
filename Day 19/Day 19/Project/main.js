@@ -62,6 +62,9 @@ class State {
     this.level = level;
     this.actors = actors;
     this.status = status;
+    // if(lives === 0) {
+    //   this.level = GAME_LEVELS[0];
+    // }
   }
 // static method so it can be used in this class  
   static start(level) {
@@ -399,13 +402,23 @@ function runLevel(level, Display) {
   });
 }
 
+var lives = 3;
+
 async function runGame(plans, Display) {
+  var stats = document.querySelector(".status");
+  var livesSpan = document.querySelector(".lives");
+  livesSpan.textContent = lives;
   for (let level = 0; level < plans.length;) {
-    let status = await runLevel(new Level(plans[level]),
-                                Display);
+    let status;
+    status = await runLevel(new Level(plans[level]),Display);
+    if (status == 'lost') lives--;
+    livesSpan.textContent = lives;                           
     if (status == "won") level++;
+    if(lives === 0) {
+      status = await runLevel(new Level(plans[0]),Display);
+      livesSpan.textContent = lives;
+    };
   }
 }
-
 
 runGame(GAME_LEVELS, DOMDisplay);

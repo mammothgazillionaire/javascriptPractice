@@ -400,7 +400,22 @@ function runLevel(level, Display) {
       }
     });
   });
+  function pauseGame(event) {
+    if (event.keyCode == 27) {
+      if (state.status == 'playing') {
+        return true;
+        runAnimation(frameFunc);
+      } else if (state.status == 'pausing') {
+        return true;
+      } else if (state.status == 'yes') {
+        state.status = 'pausing';
+      }
+    }
+  }
+  addEventListener('keydown', pauseGame);
+
 }
+
 
 var lives = 3;
 

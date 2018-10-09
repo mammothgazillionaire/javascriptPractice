@@ -1,0 +1,30 @@
+:root{
+  --base: #bada55;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+body{
+  background-color: rgb(38, 38, 119);
+  color:white;
+  
+}
+
+.container{
+  text-align: center;
+  font-size: 3rem;
+  display: grid; 
+  margin: 0 auto;
+}
+
+.img_u{
+  height: 32vmax;
+  width: 50vmax;
+  margin: 0 auto;
+  margin-top:2rem; 
+  padding: var(--spacing);
+  background: var(--base);
+}
+.heading{
+  color: var(--base);
+}

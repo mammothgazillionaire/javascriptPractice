@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drag n Drop</title>
+
+  <style>
+ body,html{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  justify-content:center;
+}
+
+.list{
+  border-radius: 10px;
+  align-items: center;
+  padding: 0;
+  transform: translateY(50%);
+  background: rgba(0,0,200,.8);
+}
+.list__items{
+  padding: 1rem 0rem;
+  list-style-type: none;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 35vmax;
+  text-align:center;
+  background: rgba(0,0,200,.8);
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+
+.list__items:hover {
+  border-bottom : 5px solid black;
+  border-top : 3px solid black;
+  box-shadow: 1px 5px 5px black;
+}
+
+.list__items:active {
+  box-shadow: 1px 5px 5px black;
+  transform: rotate(.5deg);
+  background: rgba(0,0,200,1);
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="list">
+          <li class="list__items" id="one" draggable= "true">List item 1</li>
+          <li class="list__items" id="two" draggable= "true">List item 2</li>
+          <li class="list__items" id="three" draggable= "true">List item 3</li>
+          <li class="list__items" id="four" draggable= "true">List item 4</li>
+          <li class="list__items" id="five" draggable= "true">List item 5</li>
+        </ul>
+      </div>  
+  <script src="script.js"></script>
+</body>
+</html>

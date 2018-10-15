@@ -8,12 +8,7 @@ boards.style.display = "none";
 function createBoard(event) {
   
   boards.style.display = "block";
-  // boards.innerHTML = `<input type="text" class="Create" placeholder="HEADING" name="card">`;
-
-  // let card1 = document.querySelector(".create");
-
-  // card1.innerHTML = `<label for="card">${card1.value}</label>`;
-
+ 
   boards.innerHTML = `<label for="card" class="heading_card">Card</label>
                       <div for="list" class="add_list">
                       <label>Add list</label>
@@ -31,19 +26,60 @@ function createBoard(event) {
 
     var editList = addList.contentEditable = true;
 
+    var addListItems = document.querySelector(".btn-list");
+
+
+    function addItems(event){
+      console.log(event);
+    }
+
+
+    addListItems.addEventListener('click', addItems);
+
   }
+
 
 
   addList.addEventListener('click', addListItems);
 
 
-
-  // let list = {};
-
-  // BOARDS.push(card);
-  // console.log(BOARDS);
 }
 
-
-
 createButton.addEventListener('click', createBoard);
+
+
+
+
+// const BOARDS = [];
+
+// class boards{
+
+//   constructor(title){
+       
+  // var nextId = 0
+
+  // this.title = title;
+  // this.lists = [];
+  // this.cards = {};
+
+  // this.node = document.createElement('div');
+  // this.titleNode = document.createElement('div');
+  // this.listsNode = document.createElement('div');
+
+  // this.node.id = 'board';
+  // this.titleNode.id = 'trello-title-board';
+  // this.listsNode.id = 'trello-canvas-board';
+
+  // // new list title form
+  // this.titleFormNode = buildListTitleForm();
+  // this.titleNode.appendChild(document.createTextNode(this.title));
+
+//   }
+
+//   createList(){
+
+//   }
+
+// }
+
+

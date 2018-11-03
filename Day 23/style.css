@@ -42,12 +42,12 @@ img{
   word-break: break-all;
 }
 
-.btns{
+/* .btns{
   display: flex;
   justify-content: center;
   height: 100%;
   transform: translateY(-10%);
-}
+} */
 .change-gifs,
 .trending{
   align-self: center;

@@ -8,12 +8,13 @@ var listItems = document.querySelectorAll('.list__items');
 listItems.forEach(item => {
   item.addEventListener('dragstart', dragStart, false);
   item.addEventListener('dragover', dragOver);
+  // item.addEventListener('dragleave',dragLeave);
   item.addEventListener('drop', dropped);
 });
 
 function dragStart(event){
   dragElm = this;
-  // event.dataTransfer.setData(`${event.target}`, event.target);
+  // event.dataTransfer.setData(`${}`, event.target);
   // event.dataTransfer.allowedEffect = "move";
   console.log(dragElm.innerHTML);
 }
@@ -34,5 +35,12 @@ function dropped(event){
   // console.log(dropElm);
   // console.log(dragElm);
   console.log(event);
+}
+function dragLeave(event){
+  if(dragElm != this) {
+    dropElm = this.innerHTML;
+    this.innerHTML = dragElm.innerHTML;
+    dragElm.innerHTML = dropElm;
+  }
 }
 
